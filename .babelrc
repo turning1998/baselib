@@ -1,10 +1,12 @@
 {
   "presets": [
-    ["latest", {
-      "es2015": {
-        "modules": false
-      }
-    }]
+    "@babel/preset-env",
+    // "@babel/preset-react",
+    // "@babel/preset-flow"
   ],
-  "plugins": ["external-helpers"]
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "babel-plugin-inline-json-import",
+    "@babel/plugin-transform-runtime" //  // 解决多个地方使用相同代码导致打包重复的问题
+  ]
 }

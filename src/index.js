@@ -1,5 +1,8 @@
-import { version } from '../package.json';
 
-export default function () {
-  console.log('version ' + version);
+import array from './array/index'
+export {array}
+const funcA = () => {
+  console.log('rollup');
+  return 'vince';
 }
+export default funcA
