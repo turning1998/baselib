@@ -1,0 +1,1 @@
+!function(n){"function"==typeof define&&define.amd?define(n):n()}((function(){"use strict";module.exports=function(n,e){if(n===e)return!0;if(n.length!=e.length)return!1;for(var t=0;t<n.length;++t)if(n[t]!==e[t])return!1;return!0}}));

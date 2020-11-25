@@ -68,7 +68,7 @@ external属性
 
 
  npm i rollup-plugin-commonjs -D 转换 CommonJs 成 ES Module而 rollup 是不支持 import 的
-
+rollup-plugin-eslint — js代码检测
 
 需求
 脚本代码是 ES6 语法和 相关 API 书写
@@ -101,3 +101,15 @@ external属性
  3.按需使用
  4。可引入其它文件
  
+
+babel
+ 配置：babel 运行必须要有配置参数，一般写在名为 babel.config.js 或 .babelrc 的文件中
+plugin： 是完成单一功能的插件，有些插件需要进行配置
+preset：一组完成特定功能的 plugins 的组合
+polyfill：babel 的各路 preset 通常只是转换 JS 语法，不能直接提供一些新对象、新 API 的支持。 polyfill 是用来转换这些新鲜 API 的方式，它也是通过 plugin 来进行的。
+
+
+[!] TypeError: eslint is not a function
+https://stackoverflow.com/questions/54293089/rollup-and-eslint-how-can-i-fix-this-error-typeerror-eslint-is-not-a-functio
+
+
