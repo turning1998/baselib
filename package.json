@@ -4,6 +4,7 @@
   "description": "基于rollup打包的库",
   "main": "dist/umd.js",
   "module": "dist/es.js",
+  "typings": "dist/types/index.d.ts",
   "dependencies": {
     "rollup": "^2.33.3"
   },
@@ -14,11 +15,19 @@
     "@babel/plugin-transform-regenerator": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-inline-json-import": "^0.3.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-minify": "^0.5.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.0",
     "rollup": "^2.33.3",
     "rollup-plugin-async": "^1.2.0",
     "rollup-plugin-babel": "^4.4.0",
@@ -33,14 +42,16 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-uglify": "^6.0.4"
+    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.1.2"
   },
   "scripts": {
-    "dev": "node_modules/.bin/rollup -w -c ./config/rollup.config.dev.js",
-    "prod": "node_modules/.bin/rollup  -c ./config/rollup.config.prod.js",
+    "dev": "node_modules/.bin/rollup -w -c ./config/rollup.config.dev.js  --fix",
+    "prod": "node_modules/.bin/rollup  -c ./config/rollup.config.prod.js --fix",
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src /**"
+    "lint": "eslint src --fix --ext .ts"
   },
   "repository": {
     "type": "git",

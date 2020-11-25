@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module":"es2015",
+    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,//自动生成 type 类型声明文
+    "declarationDir": "dist/types", //类型声明文件位置
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  }
+}

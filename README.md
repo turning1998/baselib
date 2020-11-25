@@ -82,7 +82,27 @@ rollup-plugin-eslint — js代码检测
 需要在 HTML 文件中自动按正确路径引用生成后的脚本、样式文件，且为了避免浏览器缓存，希望目标文件名称在每次生成后能有所变化。
 
 
+git commit 
+类型	描述
+feature	新增feature
+fix	修复bug
+docs	仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等
+style	仅仅修改了空格、格式缩进、都好等等，不改变代码逻辑
+refactor	代码重构，没有加新功能或者修复bug
+perf	优化相关，比如提升性能、体验
+test	测试用例，包括单元测试、集成测试等
+tips	增加一些提示信息，例如错误提示
 
+eg
+git commit -am "fix 2038 解决点击无反应的问题"
+配置 ESLint 与 Prettier
+在配置之前，先简单介绍依赖包的作用：
+• eslint：eslint 核心库，负责整个 eslint 的调度工作
+• @typescript-eslint/parser：ESLint的解析器，用于解析typescript，从而检查和规范Typescript代码
+• @typescript-eslint/eslint-plugin：ESLint插件，包含了各类定义好的检测 typescript 代码的规范
+• prettier：prettier 核心库
+• eslint-config-prettier：解决 ESLint 中的样式规范和 prettier 中样式规范的冲突，以 prettier 的样式规范为准，使 ESLint 中的样式规范自动失效
+• eslint-plugin-prettier：将 prettier 的规范作为 ESLint 规范来使用
 
 
 
