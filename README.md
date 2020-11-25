@@ -71,8 +71,7 @@ external属性
 rollup-plugin-eslint — js代码检测
 
 需求
-脚本代码是 ES6 语法和 相关 API 书写
-项目使用 Vue 框架，包含若干 .vue 组件文件
+脚本代码是 ES6 语法和 相关 API 书写 
 样式用 POSTCSS 相关插件的规则书写
 应用需要在 IE9、Chrome 50、Firefox 50 浏览器中正常使用
 项目包含有一些静态的图片、字体
@@ -84,7 +83,8 @@ rollup-plugin-eslint — js代码检测
 
 git commit 
 类型	描述
-feature	新增feature
+upd：更新某功能（不是 feat, 不是 fix）
+feat：新功能（feature）
 fix	修复bug
 docs	仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等
 style	仅仅修改了空格、格式缩进、都好等等，不改变代码逻辑
@@ -92,9 +92,9 @@ refactor	代码重构，没有加新功能或者修复bug
 perf	优化相关，比如提升性能、体验
 test	测试用例，包括单元测试、集成测试等
 tips	增加一些提示信息，例如错误提示
-
+chore：构建过程或辅助工具的变动
 eg
-git commit -am "fix 2038 解决点击无反应的问题"
+git commit -am "fix: 2038 解决点击无反应的问题"
 配置 ESLint 与 Prettier
 在配置之前，先简单介绍依赖包的作用：
 • eslint：eslint 核心库，负责整个 eslint 的调度工作
@@ -130,6 +130,12 @@ polyfill：babel 的各路 preset 通常只是转换 JS 语法，不能直接提
 
 
 [!] TypeError: eslint is not a function
-https://stackoverflow.com/questions/54293089/rollup-and-eslint-how-can-i-fix-this-error-typeerror-eslint-is-not-a-functio
+https://stackoverflow.com/questions/54293089/rollup-and-eslint-how-can-i-fix-this-error-typeerror-eslint-is-not-a-function
+
+[!] Error: Could not resolve entry module (rollup.config.js).
+
+    at error (/Users/yulang/Desktop/项目/myproject/baselib/node_modules/rollup/dist/shared/rollup.js:5253:30)
+    at ModuleLoader.loadEntryModule (/Users/yulang/Desktop/项目/myproject/baselib/node_modules/rollup/dist/shared/rollup.js:18424:20)
+    at async Promise.all (index 0)
 
 

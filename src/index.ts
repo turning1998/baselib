@@ -1,21 +1,10 @@
-interface person {
-  name: string;
-  age: number;
-}
-
-const tom: person = {
-  name: 'Tom',
-  age: 25,
-};
-
-// if (tom.age === 25) {
-//   console.log(tom.name + 'is 25 years old.');
-// }
-// // console.log(sss);
-
+import {listenResize} from './lib/rem';
 const Sum = (a: number, b: number): number => {
-  // const a22 = '222';
-  return a + b + 7;
+  return a + b;
 };
-
-export default Sum;
+// export default listenResize;
+// export default () => {
+//   return {Sum, listenResize};
+// };
+exports.Sum = Sum;
+exports.listenResize = listenResize;

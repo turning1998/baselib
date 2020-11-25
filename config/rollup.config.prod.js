@@ -1,14 +1,11 @@
 // 生产环境
-
-const {uglify} = require('rollup-plugin-uglify');
-const {terser} = require('rollup-plugin-terser');
-const configBaseList = require('./rollup.config');
-
-
+// import {uglify} from 'rollup-plugin-uglify';
+import {terser} from 'rollup-plugin-terser';
+import configBaseList from './rollup.config';
 configBaseList.plugins = [
   ...configBaseList.plugins,
   ...[
-    uglify(), //压缩es5
+    // uglify(), //压缩es5
     terser({
       //压缩es6
       output: {
