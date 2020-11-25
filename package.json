@@ -2,26 +2,45 @@
   "name": "baselib",
   "version": "1.0.0",
   "description": "基于rollup打包的库",
-  "main": "index.js",
+  "main": "dist/umd.js",
+  "module": "dist/es.js",
   "dependencies": {
     "rollup": "^2.33.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",
+    "@babel/plugin-external-helpers": "^7.12.1",
+    "@babel/plugin-transform-async-to-generator": "^7.12.1",
+    "@babel/plugin-transform-regenerator": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-inline-json-import": "^0.3.2",
     "babel-preset-latest": "^6.24.1",
+    "babel-preset-minify": "^0.5.1",
     "rollup": "^2.33.3",
+    "rollup-plugin-async": "^1.2.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-gen-html": "^0.2.7",
     "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-uglify": "^6.0.4"
   },
   "scripts": {
+    "dev": "node_modules/.bin/rollup -w -c ./config/rollup.config.dev.js",
+    "prod": "node_modules/.bin/rollup  -c ./config/rollup.config.prod.js",
     "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src /**"
   },
   "repository": {
     "type": "git",
