@@ -11,12 +11,12 @@ const copy=require('rollup-plugin-copy');
 const path = require('path');
 const html =require('rollup-plugin-gen-html');
 const {eslint}=require('rollup-plugin-eslint');
-const typescript=require('rollup-plugin-typescript2');
+const typescript=require('rollup-plugin-typescript2')
 const resolveFile = function (filePath) {
     return path.join(__dirname, '..', filePath);
 };
 module.exports = {
-    input: resolveFile('./src/index.ts'), //入口文件
+    input: resolveFile('./src/index.js'), //入口文件
     output: [
         {               //cjs模式
             file: resolveFile('dist/cjs.js'),
@@ -38,7 +38,7 @@ module.exports = {
     plugins: [
         clear({targets:['dist']}), //清除dist目录
         copy({'src/assets':'dist/assets'}),//复制静态文件
-        typescript({ useTsconfigDeclarationDir: true}),//useTsconfigDeclarationDir使用根目录tsconfig.json的配置
+        typescript({ useTsconfigDeclarationDir: true}),//useTsconfigDeclarationDir使用根目录tsconfig
         async(),
         json(),
         resolve(),
