@@ -11,11 +11,11 @@ module.exports = {
   // extends 是直接使用别人已经写好的 lint 规则，方便快捷
   extends: [
     // 使用 @typescript-eslint/recommended 中的规则
-    'plugin:@typescript-eslint/recommended',
-    // 使得 @typescript-eslint 中的样式规范失效，遵循 prettier 中的样式规范
-    'prettier/@typescript-eslint',
-    // eslint 使用 prettier 中的样式规范，且如果使得 ESLint 检测到 prettier 的格式问题，将以 error 的形式抛出
-    'plugin:prettier/recommended',
+    // 'plugin:@typescript-eslint/recommended',
+    // // 使得 @typescript-eslint 中的样式规范失效，遵循 prettier 中的样式规范
+    // 'prettier/@typescript-eslint',
+    // // eslint 使用 prettier 中的样式规范，且如果使得 ESLint 检测到 prettier 的格式问题，将以 error 的形式抛出
+    // 'plugin:prettier/recommended',
   ],
   // 全局变量的预设，配置了 es6 和 node 中的全局变量
   env: {

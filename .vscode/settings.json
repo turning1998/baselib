@@ -1,0 +1,5 @@
+{
+  "prettier.vueIndentScriptAndStyle": true,
+  "prettier.printWidth": 140,
+  "prettier.singleQuote": true
+}

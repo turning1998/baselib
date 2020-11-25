@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module":"es2015",
-    "lib": ["es2015", "es2016", "es2017", "dom"],
-    "strict": true,
-    "sourceMap": true,
-    "declaration": true,//自动生成 type 类型声明文
-    "declarationDir": "dist/types", //类型声明文件位置
+    "target": "es5", // 编译目标
+    "module":"es2015",// 模块类型
+    "lib": ["es2015", "es2016", "es2017", "dom"],// 导入库类型定义
+    "strict": true,// 严格模式
+    "sourceMap": true,//// 生成定义sourceMap
+    "declaration": true,//// 生成定义文件
+    "declarationDir": "dist/types", //类型声明文件位置 自动创建声明文件(.d.ts)
+    "noUnusedLocals": true, // 未使用变量报错
+    "outDir": "./dist",  /* 编译输出目录 */
     "typeRoots": [
       "node_modules/@types"
     ]
-  }
+  },
+  "include": ["src/*"] //导入模块
 }

@@ -1,4 +1,4 @@
-import {listenResize} from './lib/rem';
+import {listenResize} from './lib/rem/index';
 const Sum = (a: number, b: number): number => {
   return a + b;
 };

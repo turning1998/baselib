@@ -10,18 +10,15 @@ module.exports = {
   // 测试文件匹配
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   collectCoverage: true,
-    // 不计入覆盖率中
-    coveragePathIgnorePatterns: [
-        "/node_modules/",
-        "/test/"
-    ],
-    // 覆盖率达标阈值，不达标即测试失败，抛出 error
-    coverageThreshold: {
-      "global": {
-          "branches": 90,
-          "functions": 95,
-          "lines": 95,
-          "statements": 95
-      }
+  // 不计入覆盖率中
+  coveragePathIgnorePatterns: ['/node_modules/', '/test/'],
+  // 覆盖率达标阈值，不达标即测试失败，抛出 error
+  coverageThreshold: {
+    global: {
+      branches: 90,
+      functions: 95,
+      lines: 95,
+      statements: 95,
     },
+  },
 };

@@ -138,4 +138,7 @@ https://stackoverflow.com/questions/54293089/rollup-and-eslint-how-can-i-fix-thi
     at ModuleLoader.loadEntryModule (/Users/yulang/Desktop/项目/myproject/baselib/node_modules/rollup/dist/shared/rollup.js:18424:20)
     at async Promise.all (index 0)
 
+// 按需引入
+1.以方法类型进行拆分  eg lib-array-index lib -doubble-index
+2
 
