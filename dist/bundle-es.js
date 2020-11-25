@@ -25,7 +25,7 @@ function index (arr1, arr2) {
 
 var funcA = function funcA() {
   console.log('rollup');
-  return 'vince';
+  return 'vin11323223232311ce';
 };
 
 export default funcA;

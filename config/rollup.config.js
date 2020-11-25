@@ -4,7 +4,9 @@ const RollupPluginBabel = require('rollup-plugin-babel')
 const resolve = require('rollup-plugin-node-resolve');
 const RollupPluginBuble = require('rollup-plugin-buble')
 const async = require('rollup-plugin-async');
+const clear=require('rollup-plugin-clear')
 const commonjs=require('rollup-plugin-commonjs')
+const copy=require('rollup-plugin-copy')
 const path = require('path')
 const resolveFile = function (filePath) {
   return path.join(__dirname, '..', filePath)
@@ -34,7 +36,9 @@ module.exports = {
   plugins: [
     async(),
     resolve(),
-    commonjs(),// 在其他插件转换模块之前 - 这是为了防止其他插件的改变破坏CommonJS的检测。
+    clear({targets:['dist']}), //清除dist目录
+    commonjs(),//  // 支持代码中引用 CommonJS 规格的模块 在其他插件转换模块之前 - 这是为了防止其他插件的改变破坏CommonJS的检测。
+    copy({'src/assets':'dist/assets'}),//复制静态文件
     JsonPluginJson(),
     RollupPluginBuble({
       objectAssign: 'Object.assign',

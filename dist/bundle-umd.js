@@ -31,7 +31,7 @@
 
   var funcA = function funcA() {
     console.log('rollup');
-    return 'vince';
+    return 'vin11323223232311ce';
   };
 
   exports.array = index;
