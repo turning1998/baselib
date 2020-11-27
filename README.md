@@ -83,7 +83,6 @@ rollup-plugin-eslint — js代码检测
 
 git commit 
 类型	描述
-upd：更新某功能（不是 feat, 不是 fix）
 feat：新功能（feature）
 fix	修复bug
 docs	仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等
