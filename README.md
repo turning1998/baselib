@@ -106,9 +106,32 @@ git commit -am "fix: 2038 解决点击无反应的问题"
 
 
 
+/**
+* @author Mondo
+* @description list 数据结构 转换成 树结构
+* @param {Array} data 需要转换的数据
+* @param {String} id 节点 id
+* @param {String} pid 父级节点 id
+* @param {String} child 子树为节点对象的某个属性值
+* @param {Object} labels 需要新增的字段名集合 { label: 'category_name' }
+* @return {Array}
+*
+* @example
+* formatListToTree({data: [{id:1}, {id: 2}, {id: 3, pid: 1}]})
+* =>
+* [ { id: 1, children: [ {id: 3, pid: 1} ] }, { id: 2 } ]
+*/
 
-
-
+@author 该类/方法的作者。
+@class 表示这是一个类。
+@function/@method 表示这是一个函数/方法(这是同义词)。
+@private 表示该类/方法是私有的，JSDOC 不会为其生成文档。
+@name 该类/方法的名字。
+@description 该类/方法的描述。
+@param 该类/方法的参数，可重复定义。
+@return 该类/方法的返回类型。
+@link 创建超链接，生成文档时可以为其链接到其他部分。
+@example 创建例子。
 
 
 
@@ -142,3 +165,23 @@ https://stackoverflow.com/questions/54293089/rollup-and-eslint-how-can-i-fix-thi
 1.以方法类型进行拆分  eg lib-array-index lib -doubble-index
 2
 
+https://www.coder.work/article/1050944
+
+https://github.com/jsdoc/jsdoc/issues/517
+
+https://stackoverflow.com/questions/37989710/how-to-use-jsdoc-in-local-project
+
+https://github.com/jsdoc/jsdoc/issues/1155
+
+
+生成ts文档
+https://github.com/TypeStrong/TypeDoc
+
+Warning: You are running in an unsupported TypeScript version! TypeDoc supports 3.9.x || 4.0.x
+https://stackoverflow.com/questions/57216110/the-angular-compiler-requires-typescript-3-4-0-and-3-5-0-but-3-5-3-was-found
+
+
+例如，在桌面端浏览器视口尺寸为650px，那么 1vw = 650 * 1% = 6.5px（这是理论推算的出，如果浏览器不支持0.5px，那么实际渲染结果可能是7px）
+
+20vw=375px
+2=37.5

@@ -2,18 +2,19 @@
   "name": "baselib",
   "version": "1.0.0",
   "description": "基于rollup打包的库",
-  "main": "dist/umd.js",
-  "module": "dist/es.js",
+  "main": "package/libumd.js",
+  "module": "package/libes.js",
   "typings": "dist/types/src/index.d.ts",
   "dependencies": {
     "rollup": "^2.33.3"
   },
   "scripts": {
-    "dev": "node_modules/.bin/rollup -w -c ./config/rollup.config.dev.js  ",
-    "prod": "node_modules/.bin/rollup  -c ./config/rollup.config.prod.js ",
+    "dev": "node_modules/.bin/rollup -w -c ./config/rollup.config.dev.js",
+    "prod": "node_modules/.bin/rollup  -c ./config/rollup.config.prod.js  ",
     "build": "rollup -c",
     "lint": "eslint src --fix --ext .ts",
-    "test": "jest"
+    "test": "jest",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",
@@ -22,6 +23,7 @@
     "@babel/plugin-transform-regenerator": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
+    "@babel/types": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@types/jest": "^26.0.15",
@@ -56,7 +58,8 @@
     "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^26.4.4",
-    "typescript": "^4.1.2"
+    "typedoc": "^0.19.2",
+    "typescript": "^3.9.7"
   },
   "repository": {
     "type": "git",

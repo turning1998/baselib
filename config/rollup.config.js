@@ -49,7 +49,7 @@ export default dirs
       external: [], // 需要外部引用的包添加到数组中，rollup 即不会将其打包到打包文件中。
 
       plugins: [
-        clear({targets: ['dist']}), //清除dist目录
+        clear({targets: ['dist','package']}), //清除dist目录
         copy({'src/assets': 'dist/assets'}), //复制静态文件
         typescript({useTsconfigDeclarationDir: true}), //useTsconfigDeclarationDir使用根目录tsconfig
         async(),
@@ -88,19 +88,19 @@ export default dirs
       output: [
         {
           //cjs模式
-          file: resolveFile(`dist/package/libcjs.js`),
+          file: resolveFile(`package/libcjs.js`),
           format: 'cjs', //commonjs模块
           name: '37util-cjs',
         },
         {
           //出口文件
-          file: resolveFile(`dist/package/libes.js`),
+          file: resolveFile(`package/libes.js`),
           format: 'es', // es模块
           name: '37util-es',
         },
         {
           //出口文件
-          file: resolveFile(`dist/package/libumd.js`),
+          file: resolveFile(`package/libumd.js`),
           format: 'umd', // 浏览器能识别模块
           name: '37util-umd',
         },
@@ -108,18 +108,17 @@ export default dirs
       external: [], // 需要外部引用的包添加到数组中，rollup 即不会将其打包到打包文件中。
 
       plugins: [
-        clear({targets: ['dist']}), //清除dist目录
+        clear({targets: ['dist','package']}), //清除dist目录
         copy({'src/assets': 'dist/assets'}), //复制静态文件
         typescript({useTsconfigDeclarationDir: true}), //useTsconfigDeclarationDir使用根目录tsconfig
         async(),
         json(),
-        // resolve({extensions: ['.jsx', '.js', 'ts']}),
         commonjs(), //  // 支持代码中引用 CommonJS 规格的模块 在其他插件转换模块之前 - 这是为了防止其他插件的改变破坏CommonJS的检测。
         RollupPluginBuble({
           objectAssign: 'Object.assign',
           exclude: ['node_modules/**'],
         }),
-        eslint({}),
+        eslint(),
         // 从模板生成 html 文件，并自动引入生成的脚本和样式
         html({
           template: 'src/index.html',
