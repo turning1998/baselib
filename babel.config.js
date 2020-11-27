@@ -1,20 +1,16 @@
-// babel.config.js
 module.exports = {
-    presets: [
-        [
-            '@babel/preset-env', //支持使用最新等js语法
-            {
-                modules: false,
-                useBuiltIns: 'usage'
-            }
-        ],
-        [
-            'minify',
-            { builtIns: false }
-        ]
+  presets: [
+    [
+      '@babel/preset-env', // 支持使用最新等js语法
+      {
+        modules: false,
+        useBuiltIns: 'usage',
+      },
     ],
-    plugins: [
-        '@babel/plugin-external-helpers',
-        '@babel/plugin-transform-runtime' // 若使用 babel-runtime，可以用这个插件
-    ]
+    ['minify', {builtIns: false}],
+  ],
+  plugins: [
+    '@babel/plugin-external-helpers',
+    '@babel/plugin-transform-runtime', // 若使用 babel-runtime，可以用这个插件
+  ],
 };

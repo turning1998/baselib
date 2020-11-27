@@ -1,3 +1,16 @@
 {
+<<<<<<< HEAD
   "git.ignoreLimitWarning": true
+=======
+  "prettier.vueIndentScriptAndStyle": true,
+  "prettier.printWidth": 140,
+  "prettier.singleQuote": true,
+   // 保存自动修复
+   "eslint.autoFixOnSave": true,
+   // jsx自动修复有问题，取消js的format
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+>>>>>>> dev
 }
